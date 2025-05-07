@@ -1,0 +1,94 @@
+/* App.css */
+
+body, html, .app {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .app.light {
+    background-color: #f5f5f5;
+    color: #222;
+  }
+  
+  .app.dark {
+    background-color: #121212;
+    color: #eee;
+  }
+  
+  .header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+  }
+  
+  .header button {
+    background-color: #fff;
+    color: #333;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .header button:hover {
+    background-color: #ddd;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .app.dark .form-container {
+    background-color: #1e1e1e;
+    color: #eee;
+  }
+  
+  form input,
+  form select,
+  form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 0.8rem 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .app.dark form input,
+  .app.dark form select,
+  .app.dark form textarea {
+    background-color: #2c2c2c;
+    color: #ddd;
+    border: 1px solid #555;
+  }
+  
+  form button {
+    background-color: #4b6cb7;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #3651a3;
+  }
+  
