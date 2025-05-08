@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import AddService from './pages/AddService';
-import Dashboard from './pages/Dashboard';
-import ServiceDetail from './pages/ServiceDetail'; // ✅ Updated import
-import './App.css';
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import AddService from "./pages/AddService";
+import Dashboard from "./pages/Dashboard";
+import ServiceDetail from "./pages/ServiceDetail";
+import "./App.css";
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
   return (
-    <div className={darkMode ? 'app dark' : 'app light'}>
+    <div className={darkMode ? "app dark" : "app light"}>
       <Router>
         <header className="header">
           <h1>Community Service</h1>
           <button onClick={() => setDarkMode(!darkMode)}>
-            {darkMode ? 'Light Mode' : 'Dark Mode'}
+            {darkMode ? "Light Mode" : "Dark Mode"}
           </button>
         </header>
         <Routes>

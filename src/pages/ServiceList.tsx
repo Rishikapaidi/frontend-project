@@ -1,32 +1,62 @@
-import React, { useEffect, useState } from 'react';
-import { getServices } from '../services/api';
+import React, { useEffect, useState } from "react";
+import { getServices } from "../services/api";
+import BookingForm from "../components/BookingForm";
 
 interface Service {
   id: number;
   title: string;
-  price: string;
-  category: number;
+  description: string;
+  price: number;
+  provider_id: number;
+  availableSlots: string[];
 }
 
-const ServicesList: React.FC = () => {
+const ServiceList: React.FC = () => {
   const [services, setServices] = useState<Service[]>([]);
+  const [selectedServiceId, setSelectedServiceId] = useState<number | null>(
+    null
+  );
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await getServices();
-      setServices(res || []);
-    };
-    fetchData();
+    getServices().then(setServices);
   }, []);
 
+  const toggleBookingForm = (id: number) => {
+    setSelectedServiceId((prevId) => (prevId === id ? null : id));
+  };
+
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">All Services</h2>
-      <ul className="space-y-4">
-        {services.map(service => (
-          <li key={service.id} className="p-4 border rounded shadow">
-            <h3 className="font-semibold">{service.title}</h3>
-            <p>${service.price}</p>
+    <div className="max-w-5xl mx-auto p-6">
+      <h1 className="text-2xl font-bold mb-4">Available Services</h1>
+      <ul className="space-y-6">
+        {services.map((service) => (
+          <li key={service.id} className="bg-white p-4 rounded shadow">
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-lg font-semibold">{service.title}</h3>
+                <p className="text-sm text-gray-600">{service.description}</p>
+                <p className="mt-2 text-blue-600 font-semibold">
+                  ${service.price}
+                </p>
+              </div>
+              <button
+                onClick={() => toggleBookingForm(service.id)}
+                className="text-sm bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+              >
+                {selectedServiceId === service.id ? "Hide Booking" : "Book Now"}
+              </button>
+            </div>
+
+            {selectedServiceId === service.id && (
+              <div className="mt-4">
+                <BookingForm
+                  jobId={service.id}
+                  providerId={service.provider_id}
+                  availableSlots={service.availableSlots}
+                  price={service.price}
+                />
+              </div>
+            )}
           </li>
         ))}
       </ul>
@@ -34,4 +64,4 @@ const ServicesList: React.FC = () => {
   );
 };
 
-export default ServicesList;
+export default ServiceList;
