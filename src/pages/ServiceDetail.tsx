@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getServiceById } from "../services/api";
 import BookingForm from "../components/BookingForm";
-import ReviewSection from "../components/ReviewSection"; // optional
-// import ChatBotWidget from '../components/ChatBotWidget'; // optional
+import ReviewSection from "../components/ReviewSection";
+import SimilarJobsPanel from "../components/SimilarJobsPanel";
+import ChatBotWidget from "../components/Chatbot/ChatBotWidget";
 
 interface Service {
   id: number;
@@ -12,6 +13,7 @@ interface Service {
   price: number;
   provider_id: number;
   availableSlots: string[];
+  category: string;
 }
 
 const ServiceDetail: React.FC = () => {
@@ -48,9 +50,11 @@ const ServiceDetail: React.FC = () => {
         />
       </div>
 
-      {/* Optional: Add reviews or chatbot below */}
       <ReviewSection jobId={service.id} />
-      {/* <ChatBotWidget /> */}
+
+      <SimilarJobsPanel currentJobId={service.id} category={service.category} />
+
+      <ChatBotWidget />
     </div>
   );
 };
