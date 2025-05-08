@@ -14,6 +14,7 @@ import ProviderDashboard from "./pages/ProviderDashboard";
 import Profile from "./pages/Profile";
 import AddService from "./pages/AddService";
 import ProtectedRoute from "./routes/ProtectedRoute";
+
 import "./App.css";
 
 const App: React.FC = () => {

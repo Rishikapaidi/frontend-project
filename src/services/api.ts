@@ -11,7 +11,7 @@ export const createService = async (formData: FormData) => {
   }
 };
 
-export const getServices = async () => {
+export const getServices = async (query?: string) => {
   try {
     const res = await axios.get(API_URL);
     return res.data;

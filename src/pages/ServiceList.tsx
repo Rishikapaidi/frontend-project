@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getServices } from "../services/api";
 import BookingForm from "../components/BookingForm";
+import SearchBar from "../components/SearchBar";
 
 interface Service {
   id: number;
@@ -16,10 +17,13 @@ const ServiceList: React.FC = () => {
   const [selectedServiceId, setSelectedServiceId] = useState<number | null>(
     null
   );
+  const [query, setQuery] = useState<string>("");
 
   useEffect(() => {
-    getServices().then(setServices);
-  }, []);
+    getServices(query)
+      .then(setServices)
+      .catch((err) => console.error("Error fetching services:", err));
+  }, [query]);
 
   const toggleBookingForm = (id: number) => {
     setSelectedServiceId((prevId) => (prevId === id ? null : id));
@@ -28,6 +32,12 @@ const ServiceList: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-4">Available Services</h1>
+
+      {/* Search input */}
+      <div className="mb-4">
+        <SearchBar value={query} onChange={setQuery} />
+      </div>
+
       <ul className="space-y-6">
         {services.map((service) => (
           <li key={service.id} className="bg-white p-4 rounded shadow">

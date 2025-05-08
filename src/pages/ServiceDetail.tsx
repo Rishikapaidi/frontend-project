@@ -4,7 +4,7 @@ import { getServiceById } from "../services/api";
 import BookingForm from "../components/BookingForm";
 import ReviewSection from "../components/ReviewSection";
 import SimilarJobsPanel from "../components/SimilarJobsPanel";
-import ChatBotWidget from "../components/Chatbot/ChatBotWidget";
+import ChatBotWidget from "../components/Chatbot/ChatbotWidget";
 
 interface Service {
   id: number;
