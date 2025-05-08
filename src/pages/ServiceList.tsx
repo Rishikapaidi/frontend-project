@@ -18,12 +18,28 @@ const ServiceList: React.FC = () => {
     null
   );
   const [query, setQuery] = useState<string>("");
+  const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(
+    null
+  );
 
+  // 1. Request browser geolocation on mount
   useEffect(() => {
-    getServices(query)
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) =>
+          setCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
+        (err) => console.error("Geolocation error:", err),
+        { enableHighAccuracy: true }
+      );
+    }
+  }, []);
+
+  // 2. Fetch services when query or coords change
+  useEffect(() => {
+    getServices(query, coords)
       .then(setServices)
       .catch((err) => console.error("Error fetching services:", err));
-  }, [query]);
+  }, [query, coords]);
 
   const toggleBookingForm = (id: number) => {
     setSelectedServiceId((prevId) => (prevId === id ? null : id));
@@ -38,6 +54,7 @@ const ServiceList: React.FC = () => {
         <SearchBar value={query} onChange={setQuery} />
       </div>
 
+      {/* Services list */}
       <ul className="space-y-6">
         {services.map((service) => (
           <li key={service.id} className="bg-white p-4 rounded shadow">

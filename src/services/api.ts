@@ -11,7 +11,10 @@ export const createService = async (formData: FormData) => {
   }
 };
 
-export const getServices = async (query?: string) => {
+export const getServices = async (
+  query?: string,
+  coords?: { lat: number; lng: number } | null
+) => {
   try {
     const res = await axios.get(API_URL);
     return res.data;
