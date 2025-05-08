@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import MyBookings from "./pages/MyBookings";
+import Profile from "./pages/Profile";
+import ServiceDetails from "./pages/ServiceDetails";
+import Settings from "./pages/Settings";
+import HelpSupport from "./pages/HelpSupport";
+import { UserProvider } from "./context/UserContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <UserProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/bookings" element={<MyBookings />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/service/:id" element={<ServiceDetails />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/help-support" element={<HelpSupport />} />
+          </Routes>
+        </Router>
+      </UserProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,300 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "name": "Home Cleaning",
+      "description": "Professional home cleaning service with eco-friendly products. Our team of expert cleaners will leave your home spotless, using only environmentally safe cleaning agents that are tough on dirt but gentle on your family and pets.",
+      "imageUrl": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.8,
+      "cost": 85,
+      "distance": 3.2,
+      "category": "home"
+    },
+    {
+      "id": "2",
+      "name": "Lawn Mowing",
+      "description": "Regular lawn maintenance and garden care. Our professional gardeners provide comprehensive lawn services including mowing, edging, fertilizing, and weed control to keep your yard looking its best year-round.",
+      "imageUrl": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.5,
+      "cost": 45,
+      "distance": 5.7,
+      "category": "outdoor"
+    },
+    {
+      "id": "3",
+      "name": "Computer Repair",
+      "description": "Expert computer repair and maintenance services. Our certified technicians can diagnose and fix hardware issues, remove viruses, recover lost data, and optimize your system for peak performance.",
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.9,
+      "cost": 95,
+      "distance": 2.1,
+      "category": "tech"
+    },
+    {
+      "id": "4",
+      "name": "Math Tutoring",
+      "description": "One-on-one math tutoring for all levels. From elementary arithmetic to advanced calculus, our experienced tutors provide personalized instruction to help students build confidence and improve their grades.",
+      "imageUrl": "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.7,
+      "cost": 55,
+      "distance": 8.3,
+      "category": "education"
+    },
+    {
+      "id": "5",
+      "name": "Physical Therapy",
+      "description": "Specialized physical therapy sessions for recovery. Our licensed therapists create customized rehabilitation programs to help you recover from injuries, manage chronic pain, and restore mobility and function.",
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.9,
+      "cost": 120,
+      "distance": 4.5,
+      "category": "health"
+    },
+    {
+      "id": "6",
+      "name": "Birthday Party Planning",
+      "description": "Complete birthday party planning and execution. Let us handle everything from venue selection and decorations to entertainment and catering, ensuring a memorable celebration for your special day.",
+      "imageUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.6,
+      "cost": 150,
+      "distance": 6.8,
+      "category": "events"
+    },
+    {
+      "id": "7",
+      "name": "Plumbing Services",
+      "description": "Professional plumbing repairs and installations. Our licensed plumbers can handle everything from leaky faucets and clogged drains to complex pipe installations and water heater replacements.",
+      "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.7,
+      "cost": 95,
+      "distance": 4.2,
+      "category": "home"
+    },
+    {
+      "id": "8",
+      "name": "Dog Walking",
+      "description": "Regular dog walking services for busy pet owners. Our reliable pet care professionals will ensure your furry friend gets the exercise they need with scheduled walks tailored to your pet's energy level and needs.",
+      "imageUrl": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.8,
+      "cost": 25,
+      "distance": 1.5,
+      "category": "pets"
+    },
+    {
+      "id": "9",
+      "name": "Yoga Classes",
+      "description": "Private and group yoga instruction for all levels. Our certified yoga instructors offer classes that focus on proper alignment, breathing techniques, and mindfulness to improve flexibility, strength, and mental wellbeing.",
+      "imageUrl": "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.9,
+      "cost": 40,
+      "distance": 3.8,
+      "category": "health"
+    },
+    {
+      "id": "10",
+      "name": "Web Development",
+      "description": "Custom website design and development. Our talented web developers create responsive, user-friendly websites that look great on any device and help grow your online presence and business reach.",
+      "imageUrl": "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.8,
+      "cost": 200,
+      "distance": 5,
+      "category": "tech"
+    },
+    {
+      "id": "11",
+      "name": "Language Lessons",
+      "description": "Personalized language instruction in Spanish, French, Mandarin, and more. Our native-speaking tutors use an immersive approach to help you develop practical conversation skills and build confidence in your target language.",
+      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.7,
+      "cost": 50,
+      "distance": 6.2,
+      "category": "education"
+    },
+    {
+      "id": "12",
+      "name": "House Painting",
+      "description": "Interior and exterior painting services. Our skilled painters use premium quality paints and materials to transform your space with expert preparation, meticulous application, and thorough cleanup.",
+      "imageUrl": "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "rating": 4.6,
+      "cost": 350,
+      "distance": 7.5,
+      "category": "home"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "2",
+      "serviceId": "3",
+      "serviceName": "Computer Repair",
+      "date": "2023-04-15",
+      "time": "10:30 AM",
+      "comments": "My laptop is running very slow, need a tune-up.",
+      "status": "pending",
+      "createdAt": "2023-04-08"
+    },
+    {
+      "id": "3",
+      "serviceId": "5",
+      "serviceName": "Physical Therapy",
+      "date": "2023-04-12",
+      "time": "3:15 PM",
+      "comments": "Recovering from knee surgery, need specialized attention.",
+      "status": "completed",
+      "createdAt": "2023-04-05"
+    },
+    {
+      "id": "4",
+      "serviceId": "2",
+      "serviceName": "Lawn Mowing",
+      "date": "2023-04-18",
+      "time": "9:00 AM",
+      "comments": "Please bring equipment for hedge trimming as well.",
+      "status": "cancelled",
+      "createdAt": "2023-04-07"
+    },
+    {
+      "id": "5",
+      "serviceId": "6",
+      "serviceName": "Birthday Party Planning",
+      "date": "2023-05-10",
+      "time": "2:00 PM",
+      "comments": "Planning a party for 20 kids, need full service.",
+      "status": "confirmed",
+      "createdAt": "2023-04-01"
+    },
+    {
+      "id": "6",
+      "serviceId": "7",
+      "serviceName": "Plumbing Services",
+      "date": "2023-04-20",
+      "time": "11:00 AM",
+      "comments": "Leaking faucet in the master bathroom needs repair.",
+      "status": "pending",
+      "createdAt": "2023-04-15"
+    },
+    {
+      "id": "7",
+      "serviceId": "8",
+      "serviceName": "Dog Walking",
+      "date": "2023-04-11",
+      "time": "4:30 PM",
+      "comments": "My dog is a golden retriever, very friendly but energetic.",
+      "status": "completed",
+      "createdAt": "2023-04-02"
+    },
+    {
+      "id": "8",
+      "serviceId": "9",
+      "serviceName": "Yoga Classes",
+      "date": "2023-04-25",
+      "time": "9:15 AM",
+      "comments": "Beginner level, looking for help with basic poses and relaxation techniques.",
+      "status": "confirmed",
+      "createdAt": "2023-04-10"
+    },
+    {
+      "id": "9",
+      "serviceId": "10",
+      "serviceName": "Web Development",
+      "date": "2023-05-01",
+      "time": "10:00 AM",
+      "comments": "Need to discuss creating an e-commerce website for my small business.",
+      "status": "pending",
+      "createdAt": "2023-04-12"
+    },
+    {
+      "id": "10",
+      "serviceId": "11",
+      "serviceName": "Language Lessons",
+      "date": "2023-04-14",
+      "time": "5:30 PM",
+      "comments": "Intermediate level Spanish, primarily need conversation practice.",
+      "status": "completed",
+      "createdAt": "2023-03-30"
+    },
+    {
+      "id": "11",
+      "serviceId": "12",
+      "serviceName": "House Painting",
+      "date": "2023-04-30",
+      "time": "8:00 AM",
+      "comments": "Need two bedrooms painted, walls only. I have already purchased the paint.",
+      "status": "confirmed",
+      "createdAt": "2023-04-11"
+    },
+    {
+      "id": "12",
+      "serviceId": "4",
+      "serviceName": "Math Tutoring",
+      "date": "2023-04-13",
+      "time": "4:00 PM",
+      "comments": "Need help with algebra for high school student preparing for exams.",
+      "status": "cancelled",
+      "createdAt": "2023-04-03"
+    },
+    {
+      "id": "14",
+      "serviceId": "5",
+      "serviceName": "Physical Therapy",
+      "date": "2023-04-19",
+      "time": "1:45 PM",
+      "comments": "Follow-up session for shoulder rehabilitation.",
+      "status": "completed",
+      "createdAt": "2023-04-06"
+    },
+    {
+      "id": "15",
+      "serviceId": "8",
+      "serviceName": "Dog Walking",
+      "date": "2023-04-23",
+      "time": "3:30 PM",
+      "comments": "Two dogs need walking, a Labrador and a Beagle.",
+      "status": "cancelled",
+      "createdAt": "2023-04-18"
+    },
+    {
+      "id": "1746620173093",
+      "serviceId": "1",
+      "serviceName": "Home Cleaning",
+      "date": "2025-05-20",
+      "time": "14:00",
+      "comments": "clean need urgently",
+      "cost": 85,
+      "status": "pending",
+      "createdAt": "2025-05-07T12:16:13.093Z"
+    },
+    {
+      "id": "1746620303987",
+      "serviceId": "6",
+      "serviceName": "Birthday Party Planning",
+      "date": "2025-05-23",
+      "time": "11:00",
+      "comments": "",
+      "cost": 150,
+      "status": "pending",
+      "createdAt": "2025-05-07T12:18:23.987Z"
+    },
+    {
+      "id": "1746656654331",
+      "serviceId": "5",
+      "serviceName": "Physical Therapy",
+      "date": "2025-05-16",
+      "time": "10:00",
+      "comments": "",
+      "cost": 120,
+      "status": "pending",
+      "createdAt": "2025-05-07T22:24:14.331Z"
+    },
+    {
+      "id": "1746660545486",
+      "serviceId": "1",
+      "serviceName": "Home Cleaning",
+      "date": "2025-05-09",
+      "time": "11:00",
+      "comments": "",
+      "cost": 85,
+      "status": "pending",
+      "createdAt": "2025-05-07T23:29:05.486Z"
+    }
+  ]
+}

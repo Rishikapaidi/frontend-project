@@ -1,46 +1,129 @@
-# Getting Started with Create React App
+# Community Service Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application for managing community services and bookings.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Service Discovery**: Browse, search, and filter community services
+- **Booking Management**: Create, view, and cancel service bookings
+- **Dark Mode Support**: Toggle between light and dark themes
+- **Responsive Design**: Works on mobile, tablet, and desktop devices
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/community-service-dashboard.git
+cd community-service-dashboard
+```
 
-### `npm run build`
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the mock API server
+```bash
+npm run server
+# or
+yarn server
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server
+```bash
+npm start
+# or
+yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### `npm run eject`
+## API Integration
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The application is integrated with a RESTful API that provides the following functionality:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### User Endpoints
+- Get User Profile (`/user/profile`)
+- Update User Profile (`/user/profile`)
 
-## Learn More
+### Service Endpoints
+- Get All Services (`/services`)
+- Get Service by ID (`/services/:id`)
+- Get Services by Category (`/services?category=:category`)
+- Get Service Categories (`/services/categories`)
+- Search Services (`/services?q=:query`)
+- Get Services by Location (`/services?lat=:lat&lng=:lng&radius=:radius`)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Booking Endpoints
+- Get All Bookings (`/bookings`)
+- Get Booking by ID (`/bookings/:id`)
+- Get Customer Bookings (`/bookings/customer`)
+- Get Provider Bookings (`/bookings/provider`)
+- Create Booking (`/bookings`)
+- Get Booking Status (`/bookings/:id/status`)
+- Cancel Booking (`/bookings/:id/cancel`)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Configuration
+
+API configuration can be modified in `src/services/apiConfig.ts`:
+
+- Change `USE_MOCK` to `false` to use a real API instead of the mock server
+- Update `REAL_API_URL` with your actual API URL
+- Add an API key if required
+
+## Technology Stack
+
+- **React** - UI library
+- **TypeScript** - Type checking
+- **React Router** - Navigation
+- **Axios** - API requests
+- **Tailwind CSS** - Styling
+- **JSON Server** - Mock API (for development)
+
+## Project Structure
+
+```
+community-service-dashboard/
+├── public/                 # Static files
+│   └── data/               # Mock data for JSON server
+├── src/                    # Source code
+│   ├── components/         # Reusable UI components
+│   ├── context/            # React context providers
+│   ├── pages/              # Main application pages
+│   ├── services/           # API services
+│   ├── types/              # TypeScript type definitions
+│   ├── utils/              # Utility functions
+│   ├── App.tsx             # Application component
+│   └── index.tsx           # Entry point
+└── README.md               # Project documentation
+```
+
+## Authentication Flow
+
+The application uses JWT (JSON Web Tokens) for authentication:
+
+1. User logs in with email and password
+2. Server returns access token and refresh token
+3. Access token is stored in memory and included in API requests
+4. Refresh token is used to get a new access token when needed
+5. CSRF protection is included for POST, PUT, and DELETE requests
+
+
+
+## Acknowledgments
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [JSON Server](https://github.com/typicode/json-server)

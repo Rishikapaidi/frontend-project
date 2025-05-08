@@ -1,0 +1,76 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "name": "Plumbing",
+      "description": "All repairs related to plumbing will be handled.",
+      "imageUrl": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+      "rating": 4.5,
+      "cost": 50,
+      "distance": 5,
+      "category": "home"
+    },
+    {
+      "id": "2",
+      "name": "Electrical",
+      "description": "Wiring, appliances, and lights fixed and installed.",
+      "imageUrl": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+      "rating": 4.7,
+      "cost": 70,
+      "distance": 8,
+      "category": "home"
+    },
+    {
+      "id": "3",
+      "name": "Housekeeping",
+      "description": "Complete house cleaning and organization services.",
+      "imageUrl": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "rating": 4.3,
+      "cost": 45,
+      "distance": 3,
+      "category": "home"
+    },
+    {
+      "id": "4",
+      "name": "Landscaping",
+      "description": "Lawn care, gardening, and outdoor space design.",
+      "imageUrl": "https://images.unsplash.com/photo-1598902108854-10e335adac99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+      "rating": 4.8,
+      "cost": 65,
+      "distance": 12,
+      "category": "outdoor"
+    },
+    {
+      "id": "5",
+      "name": "Tutoring",
+      "description": "Math, science, and language tutoring for all levels.",
+      "imageUrl": "https://images.unsplash.com/photo-1580894742597-87bc8789db3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "rating": 4.9,
+      "cost": 40,
+      "distance": 7,
+      "category": "education"
+    },
+    {
+      "id": "6",
+      "name": "Computer Repair",
+      "description": "PC, laptop, and mobile device repair and maintenance.",
+      "imageUrl": "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "rating": 4.6,
+      "cost": 55,
+      "distance": 6,
+      "category": "tech"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1746615143375",
+      "serviceId": "1",
+      "serviceName": "Plumbing",
+      "date": "2025-05-09",
+      "time": "06:52",
+      "comments": "",
+      "status": "pending",
+      "createdAt": "2025-05-07T10:52:23.375Z"
+    }
+  ]
+}
