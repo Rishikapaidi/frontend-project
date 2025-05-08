@@ -109,18 +109,6 @@ community-service-dashboard/
 └── README.md               # Project documentation
 ```
 
-## Authentication Flow
-
-The application uses JWT (JSON Web Tokens) for authentication:
-
-1. User logs in with email and password
-2. Server returns access token and refresh token
-3. Access token is stored in memory and included in API requests
-4. Refresh token is used to get a new access token when needed
-5. CSRF protection is included for POST, PUT, and DELETE requests
-
-
-
 ## Acknowledgments
 
 - [React](https://reactjs.org/)
