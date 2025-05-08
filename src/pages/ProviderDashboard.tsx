@@ -1,3 +1,5 @@
+//to be replaced, just here to keep structure
+
 import React, { useEffect, useState } from "react";
 import { fetchProviderBookingStats } from "../services/api";
 
